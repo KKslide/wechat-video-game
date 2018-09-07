@@ -1,0 +1,229 @@
+// @import url("./media.css");
+@import url("./reset.css");
+@media screen and (orientation: portrait) {
+    html {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        overflow-y: scroll;
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        overflow-y: scroll;
+    }
+    #orientationContainer {
+        position: absolute;
+        overflow: hidden;
+        background-color: yellow;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    html {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+    #orientationContainer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+    body {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+    }
+}
+
+#orientationContainer {
+    h1 {
+        background-color: aqua;
+        color: red;
+        font-size: 30px;
+        text-align: center;
+    }
+}
+
+#main {
+    position: absolute;
+    background-color: #000;
+    .startAnimate {
+        width: 100%;
+        height: 100%;
+        background-color: palevioletred; 
+        position: absolute;
+        z-index: 3;
+        // top: 0;
+        // left: 0;
+        background-image: url(../img/start_bg.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        .gameLogo {
+            width: 11.41rem;
+            height: 6.67rem;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-image: url(../img/LOGO.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            opacity: 0;
+        }
+        .man {
+            width: 5.48rem;
+            height: 6.46rem;
+            background-image: url(../img/man.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            left: 9.5rem;
+            bottom: 0;
+            opacity: 0;
+        }
+        .woman {
+            width: 3.38rem;
+            height: 5.9rem;
+            background-image: url(../img/woman.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            right: 9.45rem;
+            bottom: 0;
+            opacity: 0;
+        }
+        .btn {
+            width: 7.4rem;
+            height: 1.2rem;
+            line-height: 1.2rem;
+            text-align: center;
+            font-size: .55rem;
+            font-weight: bold;
+            color: #000;
+            background-image: url(../img/start_button.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            position: absolute;
+            left: 50%;
+            bottom: 1.4rem;
+            transform: translateX(-50%);
+            opacity: 0;
+        }
+        .author {
+            position: absolute;
+            left: 0.55rem;
+            bottom: .45rem;
+            color: #fff;
+            font-size: .3rem;
+        }
+    }
+    .startAnimate.start .gameLogo {
+        animation: logoShow .8s ease .2s forwards;
+    }
+    .startAnimate.start .man {
+        animation: manShow .5s ease .8s forwards;
+    }
+    .startAnimate.start .woman {
+        animation: womanShow .5s ease .8s forwards;
+    }
+    .startAnimate.start .startBtn {
+        animation: buttonBlink .7s ease 1.8s infinite alternate;
+    }
+    .mainBtn{
+        width: 8.25rem;
+        height: 3.7rem;
+        position: absolute;
+        right:.7rem;
+        bottom:.6rem;
+        z-index: 4;
+        .btnWord{
+            width: 5.3rem;
+            height: 1.15rem;
+            line-height: 1.15rem;
+            text-align: center;
+            position: absolute;
+            font-size: .4rem;
+            font-weight: bold;
+            color:#fff;
+            background-image: url(../img/btn_bg.png);
+            background-repeat: no-repeat;
+            background-position: -0.35rem -0.1rem;
+            background-size: contain;
+        }
+        .tap-circle{
+            width: 3.7rem;
+            height: 3.7rem;
+            line-height: 3.7rem;
+            text-align: center;
+            position: relative;
+            float: right;
+            img.tap-engery{
+                position: absolute;
+                width: 3.7rem;
+            }
+            .tap-tip{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                line-height: 1.3;
+                font-size: .58rem;
+                color:#fff;
+                z-index: 5;
+            }
+        }
+    }
+}
+
+@keyframes logoShow {
+    0% {
+        opacity: 0;
+        transform: scale(3) translateX(-10%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateX(-50%);
+    }
+}
+
+@keyframes manShow{
+    0%{
+        opacity: 0;
+        left: -5.48rem;
+    }
+    100%{
+        opacity: 1;
+        left: 9.5rem;
+    }
+}
+
+@keyframes womanShow{
+    0%{
+        opacity: 0;
+        right: -3.38rem;
+    }
+    100%{
+        opacity: 1;
+        right: 9.45rem;
+    }
+}
+
+@keyframes buttonBlink{
+    0%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
