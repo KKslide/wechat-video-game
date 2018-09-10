@@ -5,13 +5,14 @@ function changeOrientation($print) {
         console.log(width + " " + height);
         $print.width(height);
         $print.height(width);
-        // $print.css('top', (height - width) / 2);
         $print.css('top', (height - width) / 2);
         $print.css('left', 0 - (height - width) / 2);
         $print.css('transform', 'rotate(90deg)');
         $print.css('transform-origin', '50% 50%');
+        /* ************************************** */
         $("#video").css('width', height);
         $("#video").css('height', width);
+        /* ************************************** */
     } else {
         $print.width(width);
         $print.height(height);
@@ -19,8 +20,11 @@ function changeOrientation($print) {
         $print.css('left', 0);
         $print.css('transform', 'none');
         $print.css('transform-origin', '50% 50%');
+
+        /* ************************************** */
         $("#video").css('width', width);
         $("#video").css('height', height);
+        /* ************************************** */
     }
 
     var evt = "onorientationchange" in window ? "orientationchange" : "resize";
@@ -40,6 +44,10 @@ function changeOrientation($print) {
                 $print.css('left', 0);
                 $print.css('transform', 'none');
                 $print.css('transform-origin', '50% 50%');
+                /* ************************************** */
+                $("#video").css('width', width);
+                $("#video").css('height', height);
+                /* ************************************** */
             }
             else {
                 $print.width(height);
@@ -48,8 +56,11 @@ function changeOrientation($print) {
                 $print.css('left', 0 - (height - width) / 2);
                 $print.css('transform', 'rotate(90deg)');
                 $print.css('transform-origin', '50% 50%');
-                // $("#video").css('width', width);
-                // $("#video").css('height', height);
+
+                /* ************************************** */
+                $("#video").css('width', height);
+                $("#video").css('height', width);
+                /* ************************************** */
             }
             setRem();
         }, 300);

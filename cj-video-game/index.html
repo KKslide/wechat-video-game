@@ -114,20 +114,44 @@
             </div>
 
             <!-- start-img -->
-            <div class="startAnimate" style="display:none;">
+            <div class="startAnimate">
                 <div class="gameLogo"></div>
                 <div class="man"></div>
                 <div class="woman"></div>
-                <div class="btn startBtn">点击开始“吃鸡”</div>
+                <div class="btn startBtn" id="btn">点击开始“吃鸡”</div>
                 <div class="author">* 本作品由大圣live&任玩传媒联合出品</div>
             </div>
 
             <!-- massage -->
             <div class="massageBG">
+                <div class="success hide"></div>
+                <div class="fail hide">
+                    <div class="bloodBg"></div>
+                    <div class="failTip"></div>
+                </div>
+                <div class="win hide">
+                    <div class="options">
+                        <div class="opt again">再来一次</div>
+                        <div class="opt share">召唤好友一起来</div>
+                    </div>
+                </div>
+                <div class="lose hide">
+                    <div class="options">
+                        <div class="opt again">再来一次</div>
+                        <div class="opt share">召唤好友一起来</div>
+                    </div>
+                </div>
+                <div class="choice hide">
+                    <div class="options">
+                        <div class="opt again">继续抢车</div>
+                        <div class="opt share">找掩体</div>
+                    </div>
+                </div>
+                <div id="btn" class="hide">再玩一次</div>
             </div>
 
             <!-- button -->
-            <div class="mainBtn">
+            <div class="mainBtn hide">
                 <div class="btnWord">疯狂点击按钮</div>
                 <div class="tap-circle">
                     <div class="tap-tip">点 击<br>防 御</div>
@@ -140,14 +164,12 @@
                 </div>
             </div>
 
-            <!-- snipe -->
-            <div class="snipe">
-                
-            </div>
+            <!-- snipte -->
+            <div class="snipte hide" id="snipte"></div>
 
-            <video src="http://7xn1j7.media1.z0.glb.clouddn.com/%E7%AC%AC%E4%B8%80%E6%AE%B5%E8%A7%86%E9%A2%91.mp4"
+            <!-- <video src="http://7xn1j7.media1.z0.glb.clouddn.com/%E7%AC%AC%E4%B8%80%E6%AE%B5%E8%A7%86%E9%A2%91.mp4"
             id="video"
-            style="object-fit:cover"
+            style="object-fit:cover;"
             webkit-playsinline="true"
             x-webkit-airplay="true"
             playsinline="true"
@@ -155,23 +177,21 @@
             x5-video-orientation="h5"
             x5-video-player-fullscreen="true"
             preload="auto"
-            poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536317092049&di=ebc6700b6f0c2dc51990ecdc4cc54867&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F590bdc942537c.jpg"
-            controls
-            ></video>
+            poster="./img/asset_bg.jpg"
+            
+            ></video> -->
+            <!-- poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536317092049&di=ebc6700b6f0c2dc51990ecdc4cc54867&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F590bdc942537c.jpg" -->
 
         </div>
     </div>
 
-    <script>
-        changeOrientation($("#orientationContainer"));
-        window.onresize=function(){
-            changeOrientation($("#orientationContainer"));
-        }
-        $('.startBtn').on('tap',()=>{
-            alert(document.documentElement.clientHeight);
-        })
-    </script>
     
 </body>
 
 </html>
+<script src="./js/videoGame.js"></script>
+<script src="./js/index.js"></script>
+<script>
+    changeOrientation($("#orientationContainer"));
+    
+</script>

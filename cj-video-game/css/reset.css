@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*
 KISSY CSS Reset
 理念：清除和重置是紧密不可分的
@@ -76,3 +77,7 @@ html { overflow-y: scroll; }
 .clearfix { *zoom: 1; }
 .fl{float:left;}
 .fr{float:right;}
+
+.hide{
+    display: none;
+}

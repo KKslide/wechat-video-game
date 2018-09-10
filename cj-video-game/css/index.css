@@ -2,12 +2,14 @@
 @media screen and (orientation: portrait) { html { width: 100%; height: 100%; background-color: white; overflow-y: scroll; }
   body { width: 100%; height: 100%; background-color: red; overflow-y: scroll; }
   #orientationContainer { position: absolute; overflow: hidden; background-color: yellow; } }
-@media screen and (orientation: landscape) { html { width: 100%; height: 100%; background-color: white; }
+@media screen and (orientation: landscape) { html { width: 100%; height: 100%; background-color: white; overflow: hidden; }
   #orientationContainer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: white; }
   body { width: 100%; height: 100%; background-color: white; } }
 #orientationContainer h1 { background-color: aqua; color: red; font-size: 30px; text-align: center; }
 
-#main { position: absolute; background-color: #000; }
+#main { position: absolute; width: 100%; height: 100%; background-color: #000; }
+#main #btn { width: 7.4rem; height: 1.2rem; line-height: 1.2rem; text-align: center; font-size: .55rem; font-weight: bold; color: #000; background-image: url(../img/start_button.png); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; left: 50%; bottom: 1.4rem; transform: translateX(-50%); }
+#main #btn.show { opacity: 1; }
 #main .startAnimate { width: 100%; height: 100%; background-color: palevioletred; position: absolute; z-index: 3; background-image: url(../img/start_bg.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; }
 #main .startAnimate .gameLogo { width: 11.41rem; height: 6.67rem; position: absolute; top: 0; left: 50%; transform: translateX(-50%); background-image: url(../img/LOGO.png); background-repeat: no-repeat; background-position: center; background-size: contain; opacity: 0; }
 #main .startAnimate .man { width: 5.48rem; height: 6.46rem; background-image: url(../img/man.png); background-repeat: no-repeat; background-position: center; background-size: contain; position: absolute; left: 9.5rem; bottom: 0; opacity: 0; }
@@ -23,6 +25,26 @@
 #main .mainBtn .tap-circle { width: 3.7rem; height: 3.7rem; line-height: 3.7rem; text-align: center; position: relative; float: right; }
 #main .mainBtn .tap-circle img.tap-engery { position: absolute; width: 3.7rem; }
 #main .mainBtn .tap-circle .tap-tip { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 1.3; font-size: .58rem; color: #fff; z-index: 5; }
+#main .mainBtn .tap-circle.biu { transform: scale(1.1); }
+#main #snipte { position: fixed; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 6.95rem; height: 6.95rem; border-radius: 6.95rem; box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 0px 2005px; z-index: 100; background-image: url(../img/cross.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
+#main #snipte::after { content: ''; text-align: center; display: block; width: 6rem; height: 1.7rem; line-height: 1.7rem; font-size: 0.65rem; font-weight: bold; color: #fff; background: url(../img/kill.png) no-repeat center; background-size: contain; position: absolute; top: -2rem; left: 50%; transform: translateX(-50%); }
+#main .massageBG { position: absolute; width: 100%; height: 100%; }
+#main .massageBG .success { position: absolute; width: 100%; height: 100%; background: url(../img/kill_bg.png) no-repeat; background-size: 11.85rem 4.28rem; background-position: center 3rem; }
+#main .massageBG .fail { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); width: 11.85rem; height: 5.5rem; background: url(../img/failure_tip_bg.png) no-repeat; background-size: contain; background-position: center; }
+#main .massageBG .fail .bloodBg { width: 9.15rem; height: 3.78rem; position: absolute; top: -0.1rem; left: 50%; transform: translateX(-50%); background: url(../img/blood_bg.png) no-repeat center; background-size: contain; z-index: 10; }
+#main .massageBG .fail .failTip { width: 8.4rem; height: 1rem; position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); background-image: url(../img/fail-1.png); background-position: center; background-size: contain; background-repeat: no-repeat; }
+#main .massageBG .win { position: absolute; width: 100%; height: 100%; background: url(../img/u_win.png) no-repeat center 2.5rem; background-size: 9.66rem 2.57rem; }
+#main .massageBG .win .options { width: 100%; min-width: 10rem; height: 1.2rem; line-height: 1.2rem; display: flex; justify-content: space-around; position: absolute; bottom: 2rem; }
+#main .massageBG .win .options .opt { height: 1.2rem; width: 4.6rem; text-align: center; background-color: #feca2d; border-radius: .3rem; font-size: .5rem; font-weight: bold; }
+#main .massageBG .lose { position: absolute; width: 100%; height: 100%; background-image: url(../img/u_lost.png); background-size: 9.66rem 4.6rem; background-repeat: no-repeat; background-position: center 2.5rem; }
+#main .massageBG .lose .options { width: 100%; height: 1.2rem; line-height: 1.2rem; display: flex; justify-content: space-around; position: absolute; bottom: 2rem; }
+#main .massageBG .lose .options .opt { height: 1.2rem; width: 4.6rem; text-align: center; background-color: #feca2d; border-radius: .3rem; font-size: .5rem; font-weight: bold; }
+#main .massageBG .choice { position: absolute; width: 100%; height: 100%; background: url(../img/chose_bg.png) no-repeat center; background-size: 5.67rem 1.52rem; }
+#main .massageBG .choice .options { width: 100%; height: 1.37rem; line-height: 1.37rem; display: flex; justify-content: space-around; position: absolute; bottom: 1.95rem; }
+#main .massageBG .choice .options .opt { width: 3.76rem; height: 1.37rem; text-align: center; background-color: #feca2d; font-size: .5rem; font-weight: bold; position: relative; padding-left: 1.37rem; }
+#main .massageBG .choice .options .opt:nth-child(1)::before { content: 'A'; position: absolute; top: 0; left: 0; width: 1.37rem; height: 1.37rem; background-color: #000; font-family: 'Impact'; font-size: .84rem; color: #feca2d; }
+#main .massageBG .choice .options .opt:nth-child(2)::before { content: 'B'; position: absolute; top: 0; left: 0; width: 1.37rem; height: 1.37rem; background-color: #000; font-family: 'Impact'; font-size: .84rem; color: #feca2d; }
+#main .massageBG .choice .options .opt::after { content: ''; position: absolute; left: 0; bottom: 0; height: .08rem; width: 100%; background-color: rgba(255, 149, 28, 0.2); }
 
 @keyframes logoShow { 0% { opacity: 0; transform: scale(3) translateX(-10%); }
   100% { opacity: 1; transform: scale(1) translateX(-50%); } }
