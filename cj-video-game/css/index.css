@@ -20,10 +20,11 @@
 #main .startAnimate.start .man { animation: manShow .5s ease .8s forwards; }
 #main .startAnimate.start .woman { animation: womanShow .5s ease .8s forwards; }
 #main .startAnimate.start .startBtn { animation: buttonBlink .7s ease 1.8s infinite alternate; }
-#main .mainBtn { width: 8.25rem; height: 3.7rem; position: absolute; right: .7rem; bottom: .6rem; z-index: 4; }
+#main .mainBtn { width: 8.25rem; height: 3.7rem; position: absolute; right: .7rem; bottom: .6rem; z-index: 11; }
 #main .mainBtn .btnWord { width: 5.3rem; height: 1.15rem; line-height: 1.15rem; text-align: center; position: absolute; font-size: .4rem; font-weight: bold; color: #fff; background-image: url(../img/btn_bg.png); background-repeat: no-repeat; background-position: -0.35rem -0.1rem; background-size: contain; }
 #main .mainBtn .tap-circle { width: 3.7rem; height: 3.7rem; line-height: 3.7rem; text-align: center; position: relative; float: right; }
-#main .mainBtn .tap-circle img.tap-engery { position: absolute; width: 3.7rem; }
+#main .mainBtn .tap-circle img.tap-engery { position: absolute; width: 3.7rem; z-index: 2; }
+#main .mainBtn .tap-circle img#bottom-img { z-index: 1; }
 #main .mainBtn .tap-circle .tap-tip { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: 1.3; font-size: .58rem; color: #fff; z-index: 5; }
 #main .mainBtn .tap-circle.biu { transform: scale(1.1); }
 #main #snipte { position: fixed; top: 55%; left: 50%; transform: translate(-50%, -50%); width: 6.95rem; height: 6.95rem; border-radius: 6.95rem; box-shadow: rgba(0, 0, 0, 0.6) 0px 0px 0px 2005px; z-index: 100; background-image: url(../img/cross.png); background-repeat: no-repeat; background-size: cover; background-position: center; }
@@ -54,5 +55,6 @@
   100% { opacity: 1; right: 9.45rem; } }
 @keyframes buttonBlink { 0% { opacity: 0.75; }
   100% { opacity: 1; } }
+.unseen { opacity: 0; }
 
 /*# sourceMappingURL=index.css.map */

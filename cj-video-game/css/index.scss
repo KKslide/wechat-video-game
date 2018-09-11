@@ -170,7 +170,7 @@
         position: absolute;
         right:.7rem;
         bottom:.6rem;
-        z-index: 4;
+        z-index: 11;
         .btnWord{
             width: 5.3rem;
             height: 1.15rem;
@@ -195,6 +195,10 @@
             img.tap-engery{
                 position: absolute;
                 width: 3.7rem;
+                z-index: 2;
+            }
+            img#bottom-img{
+                z-index: 1;
             }
             .tap-tip{
                 position: absolute;
@@ -452,4 +456,8 @@
     100%{
         opacity: 1;
     }
+}
+
+.unseen{
+    opacity: 0;
 }

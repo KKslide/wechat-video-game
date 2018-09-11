@@ -91,6 +91,8 @@
         }());
     </script>
     <script src="./js/zepto.min.js"></script>
+    <script src="./js/fx.js"></script>
+    <script src="./js/fx_methods.js"></script>
     <script src="./js/touch.js"></script>
     <script src="./js/rotate.js"></script>
     <script src="./js/loading.js"></script>
@@ -152,15 +154,16 @@
 
             <!-- button -->
             <div class="mainBtn hide">
-                <div class="btnWord">疯狂点击按钮</div>
-                <div class="tap-circle">
-                    <div class="tap-tip">点 击<br>防 御</div>
-                    <img src="./img/5tap-5.png" class="tap-engery">
+                <div class="btnWord">狂点防御敌人</div>
+                <div class="tap-circle" hitTime=5 hitTip='防御' hitDesc='狂点防御敌人'>
+                    <div class="tap-tip">防御</div>
+                    <!-- <img src="./img/5tap-5.png" class="tap-engery">
                     <img src="./img/5tap-4.png" class="tap-engery">
                     <img src="./img/5tap-3.png" class="tap-engery">
                     <img src="./img/5tap-2.png" class="tap-engery">
                     <img src="./img/5tap-1.png" class="tap-engery">
-                    <img src="./img/5tap-0.png" class="tap-engery">
+                    <img src="./img/5tap-0.png" class="tap-engery"> -->
+                    <!-- <img src="./img/5tap-0.png" class="tap-engery"> -->
                 </div>
             </div>
 
@@ -181,6 +184,8 @@
             
             ></video> -->
             <!-- poster="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1536317092049&di=ebc6700b6f0c2dc51990ecdc4cc54867&imgtype=0&src=http%3A%2F%2Fpic1.win4000.com%2Fwallpaper%2F0%2F590bdc942537c.jpg" -->
+
+            <div id="videoBox"></div>
 
         </div>
     </div>
