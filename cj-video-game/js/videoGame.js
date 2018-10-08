@@ -8,18 +8,6 @@
         'http://7xn1j7.media1.z0.glb.clouddn.com/%E7%AC%AC%E4%BA%94%E6%AE%B5%E8%A7%86%E9%A2%91-A%E7%BB%A7%E7%BB%AD%E6%8A%A2%E8%BD%A6.mp4',//srcA
         'http://7xn1j7.media1.z0.glb.clouddn.com/%E7%AC%AC%E5%85%AD%E6%AE%B5%E8%A7%86%E9%A2%91-B%E6%89%BE%E6%8E%A9%E4%BD%93.mp4'//srcB
     ];
-    // var ua = function () {
-    //     var u = navigator.userAgent, app = navigator.appVersion;
-    //     return {
-    //         mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
-    //         ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
-    //         android: u.indexOf('Android') > -1 || u.indexOf('Adr') > -1, //android终端
-    //         weixin: u.indexOf('MicroMessenger') > -1, //是否微信 （2015-01-22新增）
-    //         qq: u.match(/\sQQ/i) == " qq", //是否QQ
-    //         innerqq: u.match(/QQ\//i) == "QQ/", //是否QQ内置
-    //         weixinVer: u.match(/tbs\/0([\d]+)/i) ? u.match(/tbs\/0([\d]+)/i)[1] : 0
-    //     };
-    // }();
     var document = window.document;
     var win_width = document.documentElement.clientWidth;
     var win_height = document.documentElement.clientHeight;
